@@ -41,7 +41,7 @@ class Song
   end
 
   def self.find_or_create_by_name(name)
-  @@all.include?(name) ? return find_by_name(name) : return create_by_name(name)
+  @@all.include?(name) ? find_by_name(name) : create_by_name(name)
 end
 
   def self.alphabetical
