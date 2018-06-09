@@ -63,6 +63,17 @@ end
     song
   end
 
+  def self.create_from_filename(filename)
+    file_arr = filename.split(" - ")
+    song = self.new
+    @name = file_arr[1].chomp(".mp3")
+    song.name = @name
+    @artist_name = file_arr[0]
+    song.artist_name = @artist_name
+    @@all << song
+    song
+  end
+
   def self.destroy_all
     @@all.clear
   end
