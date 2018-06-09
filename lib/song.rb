@@ -41,7 +41,7 @@ class Song
   end
 
   def self.find_or_create_by_name(name)
-    create_by_name(name) if !!@@all.include?(name) == nil
+    return create_by_name(name) if !!@@all.include?(name) == nil
 
       find_by_name(name)
 end
