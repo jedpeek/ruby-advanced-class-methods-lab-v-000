@@ -70,6 +70,7 @@ end
     song.name = @name
     @artist_name = file_arr[0]
     song.artist_name = @artist_name
+    @@all << song
     song
   end
 
